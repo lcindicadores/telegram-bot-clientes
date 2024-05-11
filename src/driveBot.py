@@ -28,9 +28,6 @@ class driveBot:
         json_resp = self.worksheet.append_row(dados)
         updated_rows = (json_resp['updates']['updatedRows'])
         if (updated_rows < 1): return False
-        #table_range = (json_resp['updates']['updatedRange'])[-2:]
-        #rg = f"A2:{table_range}"
-        #self.worksheet.sort((1, 'asc'), range=rg)
         print("Dados inseridos com sucesso na planilha.") 
         return True      
 

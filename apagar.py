@@ -16,53 +16,16 @@ bot = TelegramBot()
 
 bot.set_chat_id("1103680702")
 bot.escolha_nome_plano(n1)
-bot.escolha_tipo_plano(p1)
+bot.escolha_tipo_plano(p3)
 bot.defini_preco_plano()
 
-bot.defini_preco_plano()              
-#print(bot.send_photo())
-id_ = "1805752457"
-#pg.confirmar_compra_pix(bot.preco_plano,bot.nome_plano,bot.tipo_plano,bot.email)
-pg.obter_pagamento(id_)
-
-'''
-bot = TelegramBot()
-bot.set_nome_plano(n1)
-bot.tipo_plano_selec(p1)
-
-bot.set_nome_plano(n1)
-bot.tipo_plano_selec(p2)
-
-bot.set_nome_plano(n1)
-bot.tipo_plano_selec(p3)
-
-bot.set_nome_plano(n2)
-bot.tipo_plano_selec(p1)
-
-bot.set_nome_plano(n2)
-bot.tipo_plano_selec(p2)
-
-bot.set_nome_plano(n2)
-bot.tipo_plano_selec(p3)
-
-bot.set_nome_plano(n3)
-bot.tipo_plano_selec(p1)
-
-bot.set_nome_plano(n3)
-bot.tipo_plano_selec(p2)
-
-bot.set_nome_plano(n3)
-bot.tipo_plano_selec(p3)
-
-a1 = (bot.encontrar_posicao(n1,bot.planos))
-a2 = (bot.encontrar_posicao(n2,bot.planos))
-a3 = (bot.encontrar_posicao(n3,bot.planos))
-
-b1 = (bot.encontrar_posicao(p1,bot.periodo)) + 1
-b2 = (bot.encontrar_posicao(p2,bot.periodo)) + 1
-b3 = (bot.encontrar_posicao(p3,bot.periodo)) + 1
-
-print(bot.planos[a1][b1])
-print(bot.planos[a1][b2])
-print(bot.planos[a1][b3])'''
-
+print(bot.index_key_dic(0))
+'''dia_validade = 14
+mes_validade = 5
+mes_validade = f"0{mes_validade}" if(mes_validade < 10) else mes_validade
+ano_validade = 2024
+sep = "-"
+validade = f"v{dia_validade}{sep}{mes_validade}{sep}{ano_validade}"
+extensao = ".psf"
+name_file = f"{n1} {validade}{extensao}"
+bot.send_document(name_file)'''
